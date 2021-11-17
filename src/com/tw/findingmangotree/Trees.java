@@ -4,18 +4,18 @@ public class Trees {
 
     public String foundMangoTree(int numberOfRows, int numberOfColumns, int treeNumber) {
         int flag = 0;
-        for (int i = 1; i <= numberOfRows; i++) {
-            if (i == 1) {
-                for (int j = 1; j <= numberOfColumns; j++) {
-                    if (treeNumber == i * j) {
+        for (int row = 1; row <= numberOfRows; row++) {
+            if (row == 1) {
+                for (int column = 1; column <= numberOfColumns; column++) {
+                    if (treeNumber == row * column) {
                         flag = 1;
                         break;
                     }
                 }
             }
-            if (i == numberOfRows) {
-                for (int j = 1; j <= numberOfColumns; j++) {
-                    if (treeNumber == i * j || treeNumber == ((i * j)) + 1) {
+            if (row == numberOfRows) {
+                for (int column = 1; column <= numberOfColumns; column++) {
+                    if (treeNumber == row * column || treeNumber == ((row * column)) + 1) {
                         flag = 1;
                         break;
 
